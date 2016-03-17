@@ -527,7 +527,7 @@
 					<a id="advisor" href="#">
 						<div class="table">
 							<div class="table-cell">
-								Contact an advisor
+								Contact advisor
 							</div>
 						</div>
 					</a>
@@ -536,7 +536,7 @@
 					<a id="veterans" href="<?php echo esc_url( home_url( '/' ) ); ?>information-for-veterans/">
 						<div class="table">
 							<div class="table-cell">
-								Find<br /> information<br /> for<br /> Veterans
+								Veterans
 							</div>
 						</div>
 					</a>
@@ -545,7 +545,7 @@
 					<a id="miners" href="<?php echo esc_url( home_url( '/' ) ); ?>information-for-displaced-miners/">
 						<div class="table">
 							<div class="table-cell">
-								Find<br /> Information<br /> for displaced<br /> miners
+								Miners
 							</div>
 						</div>
 					</a>

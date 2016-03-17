@@ -956,6 +956,12 @@ main,
 }
 
 //Navigation
+
+.single-program .main-navigation ul li:nth-of-type(2) a,
+.single-jobs .main-navigation ul li:nth-of-type(1) a{
+	color:#000000;
+	text-decoration:underline;
+}
 .main-navigation{
 	
 	.link{
@@ -1132,7 +1138,7 @@ main,
 			&:nth-of-type(1),
 			&.jobs{
 
-				&.current-menu-item a{
+				&.current-menu-item > a{
 					color:#000000;
 					text-decoration:underline;
 				}
@@ -1151,7 +1157,7 @@ main,
 			&:nth-of-type(2),
 			&.programs{
 
-				&.current-menu-item a{
+				&.current-menu-item > a{
 					color:#000000;
 					text-decoration:underline;
 				}
@@ -1173,7 +1179,7 @@ main,
 			&:nth-of-type(3),
 			&.centers{
 
-				&.current-menu-item a{
+				&.current-menu-item > a{
 					color:#000000;
 					text-decoration:underline;
 				}
@@ -1196,7 +1202,7 @@ main,
 //Gateway "bubbles"
 .gateway{
 	position:fixed;
-	top:-11px;
+	top:0px;
 	right:1em;
 	//background:red;
 	z-index:500;
@@ -1237,10 +1243,8 @@ main,
 				}
 
 				.table{
-					width:87px;
-					height:87px;
-					//background:$coriander;
-					border-radius:50%;
+					width:100px;
+					height:25px;
 				}
 
 				.table-cell{
@@ -2225,7 +2229,7 @@ body[class*='archive']{
 	.filter_by{
 		border-top:2px solid $olive_green;
 		border-bottom:2px solid $olive_green;
-		padding:5px 5px;
+		padding:5px 15px;
 	}
 
 	.filter_by span,
@@ -2425,6 +2429,7 @@ body[class*='archive']{
 .filter_toolbar{
 		color:$off_white2;
 		text-transform:uppercase;
+		margin-bottom: 8px;
 
 		.filter-type{
 			float:left;
@@ -2432,7 +2437,7 @@ body[class*='archive']{
 
 		.adv_filter{
 			float:right;
-			padding:5px 30px 3px 10px;
+			padding: 10px 40px 10px 10px;
 			//background-color:$forest_green;
 			//background-image:url('img/down_arrow.png');
 			background-position:95% center;
@@ -2445,24 +2450,15 @@ body[class*='archive']{
 			&.down{
 				background-image:url('img/down_arrow.png');
 				background-position:95% center;	
-				
-				&:hover{
-					background-position:95% 65%;
-				}
 			}
 			
 			&.up{
 				background-image:url('img/up_arrow.png');
 				background-position:95% center;
-				
-				&:hover{
-					background-position:95% 35%;
-				}
 			}
 	
 		
 			&:hover{
-				background-position:95% 65%;
 				
 				span{
 					opacity:.7;
@@ -2470,9 +2466,7 @@ body[class*='archive']{
 			}
 		}
 
-		span{
-			padding-top:5px;
-		}
+		
 
 		span,
 		ul{
@@ -2504,7 +2498,7 @@ body[class*='archive']{
 [class*='archive-program']{
 	.filter_toolbar{
 		.adv_filter{
-			background-color:$forest_green;
+			background-color:$olive_green;
 		}
 
 		ul{
@@ -2532,7 +2526,7 @@ body[class*='archive']{
 [class*='archive-jobs']{
 	.filter_toolbar{
 		.adv_filter{
-			background-color:$lighter_grey;
+			background-color:$olive_green;
 		}
 
 		ul{
@@ -2735,7 +2729,7 @@ body[class*='archive']{
 			// }
 
 			p{
-				padding:20px 20px 10px 20px;
+				padding:30px 20px 10px 20px;
 				line-height:1.4;
 				// margin:0 auto;
 				// width:95%;
@@ -3447,3 +3441,6 @@ header{
 	}
 }
 
+.filter-by {
+	margin-top: 8px;
+}

@@ -22,16 +22,18 @@ get_header(); ?>
         <h1 class="page_title">Potential Jobs</h1>
 
         <div class="filter_toolbar row">
-          <div class="filter_type">
-              <span>Filter By:</span>
-            <!-- <fieldset name="sector"> -->
-              <ul>
-                <li><a class="filter filter_icon mf" title="Filter by Manufacturing jobs" data-filter="manufacturing"><span class="sr-only">Show Manuacturing jobs</span></a></li>
-                <li><a class="filter filter_icon en" title="Filter by Energy jobs" data-filter="energy"><span class="sr-only">Show Energy jobs</span></a></li>
-                <li><a class="filter filter_icon it" title="Filter by Information Technology jobs" data-filter="information-technology"><span class="sr-only">Show Technology jobs</span></a></li>
-              </ul>
-            <!-- </fieldset> -->
-          </div>
+          
+            <div class="filter_type">
+                <span class="filter-by">Filter By:</span>
+              <!-- <fieldset name="sector"> -->
+                <ul>
+                  <li><a class="filter filter_icon mf" title="Filter by Manufacturing jobs" data-filter="manufacturing"><span class="sr-only">Show Manuacturing jobs</span></a></li>
+                  <li><a class="filter filter_icon en" title="Filter by Energy jobs" data-filter="energy"><span class="sr-only">Show Energy jobs</span></a></li>
+                  <li><a class="filter filter_icon it" title="Filter by Information Technology jobs" data-filter="information-technology"><span class="sr-only">Show Technology jobs</span></a></li>
+                </ul>
+              <!-- </fieldset> -->
+            </div>
+          
           <div class="adv_filter down">
             <span>Advanced search</span>
           </div>
