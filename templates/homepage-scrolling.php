@@ -41,7 +41,7 @@ get_header(); ?>
 		      		</div>
 		      		<div class="down_arrow">
 		      			<div class="da_container">
-		      				<a href="#pane-1"><img src="<?php echo get_template_directory_uri('/'); ?>/img/down_arrow_home.png ?>"></a>
+		      				<a href="#pane-1"><img src="<?php echo get_template_directory_uri('/'); ?>/img/down_arrow_home.png" /></a>
 		      			</div>
 		      		</div>
 		      	</div>
@@ -89,9 +89,7 @@ get_header(); ?>
       	</div><!-- End career panel -->
 
       	<?php endwhile; endif; //end hp_cp loop?> 
-      	<?php //if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      	<?php //the_content() ?>
-      <?php //endwhile; endif;?>
+
 	      <div class="panel questions">
 	      	<div class="content">
 	      		<div class="row">
@@ -116,7 +114,7 @@ get_header(); ?>
 			      		</div>
 		      		</div>
 	      		</a>	
-	      	<? endwhile; endif; //end question_block loop?>
+	      	<?php endwhile; endif; //end question_block loop ?>
 	      	</div>
 	      </div>
 	      </div>

@@ -32,8 +32,8 @@ get_header(); ?>
               </ul>
             <!-- </fieldset> -->
           </div>
-          <div class="adv_filter">
-            Advanced search
+          <div class="adv_filter down">
+            <span>Advanced search</span>
           </div>
         </div>
 

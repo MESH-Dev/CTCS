@@ -100,6 +100,7 @@ strong{
 body{
 	@include norwester_reg;
 	background:$coriander;
+	overflow-x:hidden;
 	// background:$dark_grey;
 }
 
@@ -1057,6 +1058,7 @@ main,
   		position:absolute;
 		left:-99999px;
 		float:none;
+		transition:all .2s ease-in-out;
   	}
 
   	ul li.programs:hover ul.hover .nav_hover,
@@ -1095,6 +1097,7 @@ main,
 	ul li.programs:hover ul.hover,
 	ul li.jobs:hover ul.hover{
 		left:100%;
+		opacity:1;
 		/*left:262px;*/
 		/*padding-left:25px;*/
 		position:absolute;
@@ -1307,6 +1310,7 @@ main,
   				margin-bottom:10px;
   				width:100%;
   				@include abel_reg;
+  				text-decoration:none !important;
   			}
   		}
 
@@ -1328,6 +1332,8 @@ main,
   		margin-left: 262px;
     	margin-top: 185px;
     	left:-9999px;
+    	//opacity:0;
+    	transition:all .2s ease-in-out;
 
   		&:after{
   			right: 100%;
@@ -1351,6 +1357,7 @@ main,
   		margin-left: 262px;
     	margin-top: 185px;
     	left:-9999px;
+    	transition:all 3s ease-in-out;
   		// display:none;
 
   		&:after{
@@ -2082,6 +2089,11 @@ body[class*='archive']{
 			background-position: -368px -592px;
 		}
 
+		input[type="radio"] + label span:hover,
+		input[type="checkbox"] + label span:hover{
+			background-position: -398px -592px;
+		}
+
 		input[type="radio"]:checked + label span,
 		input[type="checkbox"]:checked + label span{
 			@include sprite;
@@ -2141,7 +2153,7 @@ body[class*='archive']{
 			//background-color:$dark_grey;
 				
 				.tooltip{
-					left:-50%;
+					//left:-50%;
 				}
 		}
 		.tooltip{
@@ -2156,6 +2168,7 @@ body[class*='archive']{
 				line-height: 1;
 				z-index:10;
 				white-space: nowrap;
+				//opacity:0;
 
 				span{
 					background:$dark_grey;
@@ -2190,6 +2203,7 @@ body[class*='archive']{
 
 	.results_pane{
 		padding:5px 15px;
+		text-transform:capitalize;
 
 		#reset {
 			float:right;
@@ -2420,11 +2434,40 @@ body[class*='archive']{
 			float:right;
 			padding:5px 30px 3px 10px;
 			//background-color:$forest_green;
-			background-image:url('img/down_arrow.png');
+			//background-image:url('img/down_arrow.png');
 			background-position:95% center;
 			background-repeat:no-repeat;
 			line-height: 1;
 			cursor:pointer;
+			font-size:20px;
+			transition:all .2s ease-in-out;
+			
+			&.down{
+				background-image:url('img/down_arrow.png');
+				background-position:95% center;	
+				
+				&:hover{
+					background-position:95% 65%;
+				}
+			}
+			
+			&.up{
+				background-image:url('img/up_arrow.png');
+				background-position:95% center;
+				
+				&:hover{
+					background-position:95% 35%;
+				}
+			}
+	
+		
+			&:hover{
+				background-position:95% 65%;
+				
+				span{
+					opacity:.7;
+				}
+			}
 		}
 
 		span{
