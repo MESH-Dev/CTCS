@@ -3785,27 +3785,28 @@ span.time {
   .panel .content h2 {
     font-size: 30px;
     line-height: 1.25;
+    width: 100%;
   }
-  /* line 3435, sass/_shame.scss */
+  /* line 3436, sass/_shame.scss */
   .panel.questions h2 {
     line-height: 1.25;
   }
-  /* line 3439, sass/_shame.scss */
+  /* line 3440, sass/_shame.scss */
   .panel.questions .four.columns {
     width: 100%;
   }
 
-  /* line 3450, sass/_shame.scss */
+  /* line 3451, sass/_shame.scss */
   .filter_pane .filter_by span {
     float: none;
   }
 
-  /* line 3454, sass/_shame.scss */
+  /* line 3455, sass/_shame.scss */
   .filter_pane .filters li:first-child {
     margin-left: 0;
   }
 
-  /* line 3458, sass/_shame.scss */
+  /* line 3459, sass/_shame.scss */
   .filter_pane .filters li a {
     padding: 5px 10px;
   }
@@ -3813,57 +3814,57 @@ span.time {
 /* MOBILE (LANDSCAPE)
  * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 3466, sass/_shame.scss */
+  /* line 3467, sass/_shame.scss */
   .filter_pane .six.columns.map {
     border-right: none;
   }
 }
 @media only screen and (max-width: 500px) {
-  /* line 3471, sass/_shame.scss */
+  /* line 3472, sass/_shame.scss */
   h1 {
     font-size: 74px;
     line-height: 1;
   }
 
-  /* line 3476, sass/_shame.scss */
+  /* line 3477, sass/_shame.scss */
   .filter_pane .six.columns.map {
     border-right: none;
   }
 
-  /* line 3480, sass/_shame.scss */
+  /* line 3481, sass/_shame.scss */
   .search_bar .search {
     float: none;
     padding-left: 0;
     padding-top: 10px;
   }
 
-  /* line 3486, sass/_shame.scss */
+  /* line 3487, sass/_shame.scss */
   .results .six.columns h2.title a {
     font-size: 36px;
   }
 
-  /* line 3490, sass/_shame.scss */
+  /* line 3491, sass/_shame.scss */
   .panel .content h2 {
     width: 90%;
   }
 
-  /* line 3494, sass/_shame.scss */
+  /* line 3495, sass/_shame.scss */
   .gateway ul li {
     margin: 0 5px;
   }
 
-  /* line 3498, sass/_shame.scss */
+  /* line 3499, sass/_shame.scss */
   .filter_pane .filters li {
     display: block;
     margin: 5px 0;
   }
 
-  /* line 3503, sass/_shame.scss */
+  /* line 3504, sass/_shame.scss */
   .filter_pane .filter_by span {
     float: none;
   }
 
-  /* line 3507, sass/_shame.scss */
+  /* line 3508, sass/_shame.scss */
   [class*='archive-program'] .filter_pane .filters a:hover:after,
   [class*='archive-program'] .filter_pane .filters a:active:after,
   [class*='archive-program'] .filter_pane .filters a:focus:after,
@@ -3877,39 +3878,39 @@ span.time {
     left: -9999px;
   }
 }
-/* line 3521, sass/_shame.scss */
+/* line 3522, sass/_shame.scss */
 .filter-by {
   margin-top: 8px;
 }
 
-/* line 3527, sass/_shame.scss */
+/* line 3528, sass/_shame.scss */
 .current-page-state.link a.more:after {
   background-image: url("img/ctcs_sprite.png") !important;
   background-repeat: no-repeat;
   background-position: -361px -204px !important;
 }
-/* line 3533, sass/_shame.scss */
+/* line 3534, sass/_shame.scss */
 .current-page-state .wv_ico {
   background-position: -82px -88px !important;
 }
-/* line 3537, sass/_shame.scss */
+/* line 3538, sass/_shame.scss */
 .current-page-state > a {
   color: black !important;
   text-decoration: underline;
 }
-/* line 3542, sass/_shame.scss */
+/* line 3543, sass/_shame.scss */
 .current-page-state > a:after {
   background-image: url("img/ctcs_sprite.png");
   background-repeat: no-repeat;
   background-position: -361px -204px !important;
 }
 
-/* line 3549, sass/_shame.scss */
+/* line 3550, sass/_shame.scss */
 .breadcrumb {
   color: #A18a5e;
   margin-bottom: 20px;
 }
-/* line 3553, sass/_shame.scss */
+/* line 3554, sass/_shame.scss */
 .breadcrumb a {
   color: #A18a5e;
 }
