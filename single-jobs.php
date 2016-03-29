@@ -39,6 +39,9 @@ get_header(); ?>
       <div class="wrapper c_body">
       
       <div class="six columns">
+        
+        <?php echo simple_breadcrumb(); ?>
+        
         <div class="eh">
         <?php while ( have_posts() ) : the_post(); {?>
 
@@ -52,7 +55,7 @@ get_header(); ?>
         $job_desc = get_field('job_description');
       ?>
       <div class="desc">
-        <h2><?php echo $job_name; ?></h2>
+        <h2 class="job-title"><?php echo $job_name; ?></h2>
         <p><?php echo $job_desc; ?></p>
 
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -226,7 +229,7 @@ get_header(); ?>
                   if($locations_pin){
                    foreach ($locations_pin as $location_pin){ 
                     ?>
-                    <div class="pin <?php echo $location_pin->slug; ?>"></div>
+                    <div class="pin <?php echo $location_pin->slug; ?>" title="<?php echo $location_pin->name; ?>"></div>
                   <?php }} ?>
               </div></div>
               <div class="t_loc_data six columns">

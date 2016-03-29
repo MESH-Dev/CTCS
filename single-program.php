@@ -39,6 +39,9 @@ get_header(); ?>
       <div class="wrapper c_body">
       
       <div class="six columns">
+        
+        <?php echo simple_breadcrumb(); ?>
+        
         <div class="eh">
 
         <?php while ( have_posts() ) : the_post(); {?>
@@ -53,7 +56,7 @@ get_header(); ?>
         $program_desc = get_field('program_description');
       ?>
       <div class="desc">
-        <h2><?php echo $program_name; ?></h2>
+        <h2 class="program-title"><?php echo $program_name; ?></h2>
         <p><?php echo $program_desc; ?></p>
        <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <div class="addthis_sharing_toolbox"></div>
@@ -113,7 +116,7 @@ get_header(); ?>
                   if($locations_pin){
                    foreach ($locations_pin as $location_pin){ 
                     ?>
-                    <div class="pin <?php echo $location_pin->slug; ?>"></div>
+                    <div class="pin <?php echo $location_pin->slug; ?>" title="<?php echo $location_pin->name; ?>"></div>
                   <?php }} ?>
                 </div> <!-- end map -->
             <div class="content">
@@ -131,7 +134,7 @@ get_header(); ?>
 
                     //var_dump($college_location);
               ?>
-              <h4 class="college_name"><?php echo $college_location->name; ?>, <span class="college"><?php echo $loc_college ?></span> <div class="phone"></div><?php echo $loc_phone; ?></h4>
+              <h4 class="college_name"><?php echo $college_location->name; ?>, <span class="college"><?php echo $loc_college ?></span><br/><span class="phone"><?php echo $loc_phone; ?></span></h4>
 
               <?php if (have_rows('college_info')):
                     while(have_rows('college_info')):the_row();
@@ -149,7 +152,7 @@ get_header(); ?>
                   <div class="link sm">
                     <a href="<?php echo $lm_link; ?>">
                       <div>
-                      Learn more about this program
+                      Learn more
                       </div>
                     </a>
                   </div>

@@ -52,6 +52,7 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
         <div class="the_content">
+          <?php echo simple_breadcrumb(); ?>
           <?php the_content(); ?>
         </div>
 

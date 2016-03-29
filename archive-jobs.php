@@ -10,7 +10,7 @@ get_header(); ?>
 
 ?>
 
-<main id="main" class="site-main" role="main" style="background-image:url('<?php echo $pb_image_URL; ?>')">
+<main id="main" class="site-main has-parallax" role="main" style="background-image:url('<?php echo $pb_image_URL; ?>')">
 
   <?php get_template_part( 'contact'); ?>
 

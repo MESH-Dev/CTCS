@@ -34,19 +34,47 @@ $(window).resize(full_height);
 
   //Homepage parallax
 
-
+  var windowW = $(window).width();
+  
+  if (windowW > 768){
   $('.panel').each(function(i){
       i = i++;
       $(this).parallax("50%", .05);
     });   
+
+  $('.has-parallax').parallax("50%",.05);
+  }
+  //-----------------------------------------------------
+  
+  // $('.nav_hover.jobs a').each(function(){
+    var _jtitle = $('.job-title').text();
+    var _ptitle = $('.program-title').text();
+    console.log(_ptitle);
+    var _link = $(this).text();
+    //console.log(_link);
+    
+    $('.nav_hover.jobs a:contains('+ _jtitle +')').addClass('current-page-state');
+    $('.nav_hover.program a:contains('+ _ptitle +')').addClass('current-page-state');
+    // if(_title == _link){
+    //   $(this).addClass('current-page-state');
+    // }
+  // })
+  
 
   //-----------------------------------------------------
 
   //Show/hide 
   $('.ctc_form').hide().removeClass('hide');
 
-  $('.gateway #advisor, .ctc_advisor').click(function(e){
+  $('#advisor, .ctc_advisor').click(function(e){
     e.preventDefault();
+    console.log("Advisor Buton Clicked!");
+    $('.ctc_form').fadeIn(300);
+  });
+  
+   $('.sidr #advisor').click(function(e){
+    e.preventDefault();
+    console.log("Advisor Buton Clicked!");
     $('.ctc_form').fadeIn(300);
   });
 
@@ -316,11 +344,14 @@ function centerContent()
   var content = $('.ctc_form');
   var _header = $('header');
   var _window = $(window);
-  content.css("left", ((container.width()-content.width())/2) + _header.width());
+  console.log((container.width()-content.width())/2);
+  console.log("Form is " + content.width() + "px wide");
+  content.css("left", ((container.width()-(content.width()+40))/2) + _header.width());
   content.css("top", (_window.height()-content.height())/2);
 
   if(_window.width() <= 1024){
-    content.css("left", ((container.width()-content.width())/2));
+    console.log("Mobile window width is " + _window.width());
+    content.css("left", ((container.width()-(content.width()+40))/2));
   }
 }
 //-----------------------------------------------------
@@ -341,10 +372,10 @@ $('.map .pin').hover(function(){
   
   var tt_val = $(this).find('.tooltip').text();
   //console.log(tt_val + ' is ' + tt_width +'px wide');
-  $(this).find('.tooltip').stop().animate({'left':-((tt_width/2)+2)}, 300).fadeIn('slow');
+  $(this).find('.tooltip').stop().css({'left':-((tt_width/2)+2)}).animate({'opacity':'1'}, 300);
   
 },function(){
-  $(this).find('.tooltip').stop().animate({'left':'-9999px'}, 400);
+  $(this).find('.tooltip').stop().css({'left':'-9999px','opacity':'0'});
 });
 
 //-----------------------------------------------------
@@ -397,7 +428,14 @@ var col_count_train = Math.ceil((cols_train.length)/3);
   $('.nav_trigger').sidr({
       name: 'sidr-main',
       source: '.main-navigation',
+      displace:false,
       renaming: false,
+      onOpenEnd:  function(){$('.sidr #advisor').click(function(e){
+                                  e.preventDefault();
+                                  console.log("Advisor Buton Clicked!");
+                                  $('.ctc_form').fadeIn(300);
+                                })
+                    },
     });
 
    $('.sidr-close').click(
@@ -405,6 +443,7 @@ var col_count_train = Math.ceil((cols_train.length)/3);
       $.sidr('close', 'sidr-main');
        //console.log("Sidr should be closed");
     });
+    
 
   //================================================
 

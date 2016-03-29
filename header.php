@@ -13,9 +13,9 @@
 
 ?>
 
-<html <?php if( is_page_template('templates/homepage-fullscreen.php') ) { ?> style="background: url('<?php echo $imageURL; ?>') no-repeat center center fixed;" class="background-fullscreen" <?php } ?>>
 
-<head>
+
+<html <?php if( is_page_template('templates/homepage-fullscreen.php') ) { ?> style="background: url('<?php echo $imageURL; ?>') no-repeat center center fixed;" class="background-fullscreen" <?php } ?>>
 
 
 <head>
@@ -49,6 +49,15 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
+	
+	<script type='text/javascript'>
+	(function (d, t) {
+	  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+	  bh.type = 'text/javascript';
+	  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xvst259xjz3pnmd77d3wow';
+	  s.parentNode.insertBefore(bh, s);
+	  })(document, 'script');
+	</script>
 
 	<?php wp_head(); ?>
 
@@ -107,16 +116,60 @@
 							<div class="sector_links">
 								Learn About the Tech Sectors:
 								<ul>
-									<li><a href="<?php echo esc_url(home_url('/')); ?>/manufacturing">Manufacturing</a></li>
-									<li><a href="<?php echo esc_url(home_url('/')); ?>/energy">Energy</a></li>
-									<li><a href="<?php echo esc_url(home_url('/')); ?>/it">Internet Technology</a></li>
+									<li class="<?php if(is_page(183)) { echo 'current-page-state'; } ?>"><a href="<?php echo esc_url(home_url('/')); ?>manufacturing">Manufacturing</a></li>
+									<li class="<?php if(is_page(217)) { echo 'current-page-state'; } ?>"><a href="<?php echo esc_url(home_url('/')); ?>energy">Energy</a></li>
+									<li class="<?php if(is_page('Information Technology')) { echo 'current-page-state'; } ?>"><a href="<?php echo esc_url(home_url('/')); ?>it">Internet Technology</a></li>
 								</ul>
 							</div>
-							<div class="learn_how">
-								<a href="<?php echo esc_url(home_url('/')); ?>/how-the-programs-work">Learn how training programs work</a>
+							<?php
+							
+							$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+							$loc = false;
+
+							if (strpos($url,'?loc=true') !== false) {
+							    $loc = true;
+							} else {
+							    $loc = false;
+							}
+							
+							?>
+							
+							<div class="learn_how <?php if(is_page(235)) { echo 'current-page-state'; } ?>">
+								<a href="<?php echo esc_url(home_url('/')); ?>how-the-programs-work"  class="">Learn how training programs work</a>
 							</div>
-							<div class="link xl">
+							<div class="link xl <?php if($loc) { echo 'current-page-state'; } ?>">
 								<a href="<?php echo esc_url( home_url( '/program?loc=true' ) ); ?>" class="more">Search for programs<div class="wv_ico" aria-hidden="true"></div> closest to home</a>
+							</div>
+							<div class="mobile-only ctc-v-m">
+								<ul>
+									<li>
+										<a id="advisor" href="#">
+											<div class="table">
+												<div class="table-cell">
+													Contact advisor
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a id="veterans" href="<?php echo esc_url( home_url( '/' ) ); ?>information-for-veterans/">
+											<div class="table">
+												<div class="table-cell">
+													Veterans
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a id="miners" href="<?php echo esc_url( home_url( '/' ) ); ?>information-for-displaced-miners/">
+											<div class="table">
+												<div class="table-cell">
+													Miners
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
 							</div>
 
 					</nav>
