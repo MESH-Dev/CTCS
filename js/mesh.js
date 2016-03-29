@@ -52,9 +52,12 @@ $(window).resize(full_height);
     console.log(_ptitle);
     var _link = $(this).text();
     //console.log(_link);
-    
+    if ($('.job-title').length > 0){
     $('.nav_hover.jobs a:contains('+ _jtitle +')').addClass('current-page-state');
+    }
+    if($('.program-title').length > 0){
     $('.nav_hover.program a:contains('+ _ptitle +')').addClass('current-page-state');
+    }
     // if(_title == _link){
     //   $(this).addClass('current-page-state');
     // }
